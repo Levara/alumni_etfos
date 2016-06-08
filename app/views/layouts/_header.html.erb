@@ -3,11 +3,19 @@
         <%= link_to "ETFOS Alumni", root_path, id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "O udruzi",   o_udruzi_path %></li>
+        <li><%= link_to "Početna",   root_path %></li>
+        <li><%= link_to "O udruzi",   about_path %></li>
         <li><%= link_to "Statut",   statut_path %></li>
-        <li><%= link_to "Kontakt", kontakt_path %></li>
-        <li><%= link_to "Registracija",   '#' %></li>
-        <li><%= link_to "Prijava", '#' %></li>
+        <li><%= link_to "Kontakt", contact_path %></li>
+        
+        <% if user_signed_in? %>
+          <li><%= link_to "Profil", edit_path %></li>
+          <li><%= link_to "Odjava", logout_path %></li>
+        <% else %>
+          <li><%= link_to "Registracija",   register_path %></li>
+          <li><%= link_to "Prijava", login_path %></li>
+        <% end %> 
+      
       </ul>
     </nav>
   </div>
