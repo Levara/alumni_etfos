@@ -1,0 +1,22 @@
+<% provide(:title, "Vijesti") %>
+
+<h1>Vijesti</h1>
+
+<table class="table">
+
+<tr>
+	<td><b>Naslov</b></td>
+	<td><b>Tekst</b></td>
+	<td><b>Vidljivost</b></td>
+</tr>
+
+<% @posts.each do |post| %>
+<tr>
+	<td><b>	<%= post.title %>	</b></td>
+	<td>	<%= post.content %>	</td>
+	<td>	<%= post.link%>	</td>
+</tr>
+
+<%end%>
+
+</table>
