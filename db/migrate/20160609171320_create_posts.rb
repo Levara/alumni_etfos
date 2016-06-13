@@ -1,5 +1,5 @@
 class CreatePosts < ActiveRecord::Migration
-  def change
+  def self.up
     create_table :posts do |t|
     t.string "title"
     t.string "content"
@@ -8,5 +8,9 @@ class CreatePosts < ActiveRecord::Migration
     end
   end
 
+  def self.down
+    drop_table :posts 
+  end
+  
 end
 

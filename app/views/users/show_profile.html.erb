@@ -1,0 +1,39 @@
+
+<%if @user.first_name != "" || @user.last_name != "" %>
+<h1><%= @user.first_name + " " + @user.last_name %></h1>
+<% else %>
+<h1>Ime i prezime</h1>
+<% end %>
+
+<table class="table">
+<tr>
+	<td><b>Email:</b></td>
+	<td><%= @user.email %></td>
+</tr>
+<tr>
+	<td><b>Korisničko ime:</b></td>
+	<td><%= @user.username %></td>
+</tr>
+<tr>
+	<td><b>Ime:</b></td>
+	<td><%= @user.first_name %></td>
+</tr>
+<tr>
+	<td><b>Prezime:</b></td>
+	<td><%= @user.last_name %></td>
+</tr>
+<tr>
+	<td><b>Datum rođenja:</b></td>
+	<td><%= @user.birth_date %></td>
+</tr>
+<tr>
+	<td><b>Završetak studija:</b></td>
+	<td><%= @user.graduation_year %></td>
+</tr>
+<tr>
+	<td><b>Radno mjesto:</b></td>
+	<td><%= @user.work_place %></td>
+</tr>
+</table>
+
+<%= link_to "Uredi profil", edit_path, :class => 'btn btn-primary' %>

@@ -9,9 +9,35 @@
     <%= f.email_field :email, autofocus: true, :class => 'form-control'  %>
   </div>
 
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-  <% end %>
+  <div class="form-group">
+    <%= f.label :username %><br />
+    <%= f.text_field :username, autofocus: true, :class => 'form-control'  %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name, autofocus: true, :class => 'form-control'  %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name, autofocus: true, :class => 'form-control'  %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :birth_date %><br />
+    <%= f.date_field :birth_date, autofocus: true, :class => 'form-control'  %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :graduation_year %><br />
+    <%= f.text_field :graduation_year, autofocus: true, :class => 'form-control'  %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :work_place %><br />
+    <%= f.text_field :work_place, autofocus: true, :class => 'form-control'  %>
+  </div>
 
   <div class="form-group">
     <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />

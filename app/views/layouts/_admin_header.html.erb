@@ -1,0 +1,17 @@
+<% if admin_signed_in? %>
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="container">
+        <%= link_to "ETFOS Alumni", root_path, id: "logo" %>
+    <nav>
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to "Korisnici", admin_root_path, :method => :delete  %></li>
+        <li><%= link_to "Vijesti",  '#' %></li>
+        <li><%= link_to "Ostalo",  '#'  %></li>        
+        <li><%= link_to "Odjava", admin_logout_path %></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<% else %>
+<h2>Admin stranice ETFOS Alumni</h2>
+<% end %> 
