@@ -11,4 +11,13 @@ class StaticPagesController < ApplicationController
 
   def contact
   end
+
+  def posts
+	 @posts = Post.all
+  end
+
+  def single_post
+    @post = Post.find(params[:id])
+  end
+
 end

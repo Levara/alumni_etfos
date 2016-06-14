@@ -1,0 +1,9 @@
+<h1>Brisanje objave</h1>
+
+<%= form_for(:post, :url => {:action => 'destroy', :id => @post.id}) do |f| %>
+
+<p>Jeste li sigurni da želite ukloniti <%= @post.title %></p>
+
+<%= submit_tag ('Ukloni objavu!'), :class => 'btn btn-primary' %>
+
+<%end%>

@@ -36,5 +36,4 @@ class ApplicationController < ActionController::Base
         :current_password) 
     }
   end
-
 end

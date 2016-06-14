@@ -1,11 +1,12 @@
-
 <%if @user.first_name != "" || @user.last_name != "" %>
 <h1><%= @user.first_name + " " + @user.last_name %></h1>
 <% else %>
 <h1>Ime i prezime</h1>
 <% end %>
 
-<table class="table">
+<div class="col-md-6 col-md-offset-3">
+
+<table class="table table-striped">
 <tr>
 	<td><b>Email:</b></td>
 	<td><%= @user.email %></td>
@@ -37,3 +38,5 @@
 </table>
 
 <%= link_to "Uredi profil", edit_path, :class => 'btn btn-primary' %>
+
+</div>

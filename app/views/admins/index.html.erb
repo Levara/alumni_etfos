@@ -6,7 +6,7 @@
   	<td><b>Email:</b></td> 
   	<td><%= user.email %></td>
   	<td><%= link_to 'Pogledaj profil korisnika', {:action => 'show', :id => user.id} %></td>
-    <td><%= link_to 'Destroy', {:action => 'delete', :id => user.id} %></td>
+    <td><%= link_to 'Ukloni korisnika', {:action => 'delete', :id => user.id} %></td>
   </tr>
 <% end %>
 </table>

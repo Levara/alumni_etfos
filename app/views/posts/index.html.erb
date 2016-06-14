@@ -1,3 +1,12 @@
+<!-- 
+VIJESTI BI TREBALO MOĆI
+	- pretraživati
+	- sortirati
+	- pagination
+	- admin has many posts, post belongs to admin
+	- validations
+-->
+
 <% provide(:title, "Vijesti") %>
 
 <h1>Vijesti</h1>
@@ -6,17 +15,21 @@
 
 <tr>
 	<td><b>Naslov</b></td>
-	<td><b>Tekst</b></td>
-	<td><b>Vidljivost</b></td>
+	<td><b>Autor</b></td>
+	<th><b>Akcije</b></th>
 </tr>
 
 <% @posts.each do |post| %>
 <tr>
-	<td><b>	<%= post.title %>	</b></td>
-	<td>	<%= post.content %>	</td>
-	<td>	<%= post.link%>	</td>
+	<td><b><%= post.title %></b></td>
+	<td><%= post.author%></td>
+	<td><%= link_to 'Pogledaj objavu', {:action => 'show', :id => post.id} %></td>
+	<td><%= link_to 'Uredi objavu', {:action => 'edit', :id => post.id} %></td>
+    <td><%= link_to 'Ukloni objavu', {:action => 'delete', :id => post.id} %></td>
 </tr>
 
 <%end%>
 
 </table>
+
+<%= link_to "Nova objava", { :action => 'new' }, :class => "btn btn-primary" %>
