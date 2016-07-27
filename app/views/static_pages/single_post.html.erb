@@ -1,0 +1,12 @@
+<h1><%= @post.title %></h1>
+
+<div class="col-md-10">
+
+<%= image_tag @post.image.url(:large) %>
+
+<p><%= @post.content %></p>
+<p>Autor: <%= @post.updated_at %> </p>
+<p>Kreirano: <%= @post.created_at %></p>
+<p>Zadnje izmjene: <%= @post.updated_at %> </p>
+
+</div>

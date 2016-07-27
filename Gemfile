@@ -10,7 +10,7 @@ gem 'bootstrap-sass',	'3.2.0.0'
 gem 'will_paginate',    '3.0.7'
 gem 'bootstrap-will_paginate', '0.0.10'
 
-gem "paperclip", "~> 5.0.0.beta1"
+gem "paperclip", '~> 4.2.0'
 
 gem 'uglifier', 		'>= 1.3.0'
 gem 'coffee-rails', 	'~> 4.1.0'
