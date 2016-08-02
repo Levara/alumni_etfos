@@ -181,7 +181,7 @@ DEPENDENCIES
   devise
   jbuilder (~> 2.0)
   jquery-rails
-  mail_form (~> 1.5, >= 1.5.1)
+  mail_form (~> 1.5.1)
   paperclip (~> 4.2.0)
   pg
   rails (= 4.2.2)
