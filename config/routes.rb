@@ -9,6 +9,9 @@ Rails.application.routes.draw do
   get  'vijesti'   =>  'static_pages#posts',    as: :news
   get  'vijest/:id'=>  'static_pages#single_post'
   
+
+  get 'kontakt/novi' => 'contacts#new',
+
   resources :contacts, only: [:new, :create]
 
   devise_for :users 
