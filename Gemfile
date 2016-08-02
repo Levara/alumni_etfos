@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby  '2.1.2'
+
 gem 'rails', 			'4.2.2'
 gem 'sass-rails', 		'~> 5.0'
 
@@ -29,6 +31,7 @@ group :development, :test do
 end
 
 group :production do
-  gem 'pg', '0.18.4'
+  gem 'pg';
+  gem 'rails_12factor'
 end
 
