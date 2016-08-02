@@ -79,7 +79,7 @@ Rails.application.configure do
 
   #Konfiguracija kontakt forme
   config.action_mailer.default_url_options = { host: "https://pure-scrubland-36916.herokuapp.com/"}
-  cpnfig.action_mailer.delivery_method = :smtp
+  config.action_mailer.delivery_method = :smtp
 
   ActionMailer::Base.smtp_settings = {
   :user_name => ENV['SENDGRID_USERNAME'],
