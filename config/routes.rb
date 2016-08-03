@@ -11,7 +11,7 @@ Rails.application.routes.draw do
  
   resources :contacts, only: [:new, :create]
 
-  devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" }
+  devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks", :registrations => "users/registrations" }
 
   devise_scope :user do
     get   'uredi',        to: 'devise/registrations#edit',  as: :edit

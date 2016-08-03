@@ -2,6 +2,13 @@ class Users::RegistrationsController < Devise::RegistrationsController
 # before_action :configure_sign_up_params, only: [:create]
 # before_action :configure_account_update_params, only: [:update]
 
+
+protected
+
+def update_resource(resource, params)
+  resource.update_without_password(params)
+end
+
   # GET /resource/sign_up
   # def new
   #   super
@@ -58,24 +65,5 @@ class Users::RegistrationsController < Devise::RegistrationsController
   #   super(resource)
   # end
 
-  def update
-    @user = User.find(current_user.id)
-    email_changed = @user.email != params[:user][:email]
-    is_facebook_account = !@user.provider.blank?
-
-    successfully_updated = if !is_facebook_account
-      @user.update_with_password(params[:user])
-    else
-      @user.update_without_password(params[:user])
-    end
-
-    if successfully_updated
-      # Sign in the user bypassing validation in case his password changed
-      sign_in @user, :bypass => true
-      redirect_to root_path
-    else
-      render ('users/show_profile')
-    end
-  end
 
 end
