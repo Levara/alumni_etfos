@@ -6,6 +6,9 @@ gem 'rails', 			'4.2.2'
 gem 'sass-rails', 		'~> 5.0'
 
 gem 'devise'
+gem 'omniauth-facebook'
+
+gem 'figaro'
 
 gem 'bootstrap-sass',	'3.2.0.0'
 gem 'will_paginate',    '3.0.7'
@@ -30,6 +33,7 @@ group :development, :test do
   gem 'spring'
 end
 
+#Heroku deployment
 group :production do
   gem 'pg';
   gem 'rails_12factor'
