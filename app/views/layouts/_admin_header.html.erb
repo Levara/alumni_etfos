@@ -1,39 +1,73 @@
-
-
-  <div class="row">
-    <div class="col-sm-3 col-lg-2">
-      <nav class="navbar navbar-default navbar-fixed-side">
-        <div class="container">
-
-        <div class = "navbar-header">
-          <%= link_to "ETFOS Alumni", admin_root_path, :class => "navbar-brand" %>
-        </div>
-
-        <div class = "collapse navbar-collapse">
-        <ul class="nav navbar-nav">
-
-          <li class=<%= 'active' if current_page?(admin_root_path) || current_page?(admin_show_path(:id))%>>
-            <%= link_to "Korisnici", admin_root_path %>
-          </li>
-          <li class=<%= 'active' if current_page?(posts_path) %>>
-            <%= link_to "Vijesti",  posts_path %>
-          </li>
-          <li class=<%= 'active' if current_page?(root_path) %>>
-            <%= link_to "Ostalo",  '#'  %>
-          </li>
-          <li>
-            <%= link_to "Odjava", admin_logout_path, :id => "logout"  %>
-          </li>  
-        </ul>
-        </div>      
-
-
-
-      </div>
-      </nav>
+<nav class="navbar navbar-default visible-xs">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">AMA ETFOS</a>
     </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class=<%= 'active' if current_page?(admin_root_path) %>><%= link_to "Korisnici", admin_root_path %></li>
+        <li class=<%= 'active' if current_page?(posts_path) %>><%= link_to "Vijesti", posts_path %></li>
+        <li class=<%= 'active' if current_page?('#') %>><%= link_to "Pretplatnici", '#' %></li>
+        <li><%= link_to "Kraj rada", admin_logout_path %></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
 
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 col-lg-2 sidenav hidden-xs">
+      <div class='brand'>
+        <h2><%= image_tag 'logo_brand_white.svg', :class => 'logo-sidenav' %>AMA</h2>
+      </div>
+      <ul class="nav nav-pills nav-stacked">
+        <li><a href="#">
+          <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+          <%= current_admin.email %></a>
+        </li>
+        
+        <li class=<%= 'active' if current_page?(admin_root_path) %>>
+          <%= link_to admin_root_path do%>
+            <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+            Korisnici
+          <% end %>
+        </li>
+        
+        <li class=<%= 'active' if current_page?(posts_path) %>>
+          <%= link_to posts_path do %>
+            <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+            Vijesti
+          <% end %>
+        </li>
+        
+        <li class=<%= 'active' if current_page?('#') %>>
+          <%= link_to '#' do %>
+            <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+            Pretplatnici
+          <% end %>
+        </li>
+        
+        <li>
+          <%= link_to admin_logout_path do %>
+            <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
+            Kraj rada
+          <% end %>
+        </li>
 
+      </ul><br>
+    </div>
+    <br>
 
-
+    <div class="col-sm-8 col-lg-9 col-sm-offset-3 col-lg-offset-2 workspace">
+    
+    <% flash.each do |key, value| %>
+      <div class="alert alert-<%=key%>">
+          <%= value %>
+      </div>
+    <% end %>

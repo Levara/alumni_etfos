@@ -16,4 +16,5 @@ module ApplicationHelper
  	short_text + "..."
   end
 
+
 end

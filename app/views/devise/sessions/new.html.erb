@@ -1,5 +1,12 @@
-<h1>Prijava</h1>
+<%= image_tag "logo_brand.svg", :class => 'logo center-block img-responsive' %>
 
+<h2>AMA ADMIN PRIJAVA </h2>
+    
+<% flash.each do |key, value| %>
+  <div class="alert alert-<%= key %>">
+      <%= value %>
+    </div>
+<% end %>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="form-group">
@@ -20,9 +27,10 @@
   <% end -%>
 
   <div class="actions">
-    <%= f.submit "Log in", :class => 'btn btn-primary' %>
+    <%= f.submit "Log in", :class => 'btn btn-login center-block' %>
   </div>
 <% end %>
+</div>
 
-<%= render "devise/shared/links" %>
+
 

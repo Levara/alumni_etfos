@@ -1,4 +1,4 @@
-<!-- 
+ <!-- 
 VIJESTI BI TREBALO MOĆI
 	- pretraživati
 	- sortirati
@@ -11,24 +11,39 @@ VIJESTI BI TREBALO MOĆI
 
 <h1>Vijesti</h1>
 
-<table class="table">
+<table class="table" id="posts">
 
-<tr>
-	<td><b>Naslov</b></td>
-	<td><b>Autor</b></td>
-	<th><b>Akcije</b></th>
-</tr>
+<thead>
+	<tr>
+		<th>Naslov</th>
+		<th>Autor</th>
+		<th>Pregled</th>
+		<th>Uredi</th>
+		<th>Ukloni</th>
+	</tr>
+</thead>
 
 <% @posts.each do |post| %>
 <tr>
 	<td><b><%= post.title %></b></td>
 	<td><%= post.author%></td>
-	<td><%= link_to 'Pogledaj objavu', {:action => 'show', :id => post.id} %></td>
-	<td><%= link_to 'Uredi objavu', {:action => 'edit', :id => post.id} %></td>
-    <td><%= link_to 'Ukloni objavu', {:action => 'delete', :id => post.id} %></td>
+	<td>
+		<span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+		<%= link_to 'Pogledaj objavu', {:action => 'show', :id => post.id} %>
+	</td>
+	<td>
+		<span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+		<%= link_to 'Uredi objavu', {:action => 'edit', :id => post.id} %>
+	</td>
+    <td>
+    	<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+    	<%= link_to 'Ukloni objavu', {:action => 'delete', :id => post.id} %>
+    </td>
 </tr>
 
 <%end%>
+
+<%= will_paginate @posts, :class => 'text-center'%>
 
 </table>
 

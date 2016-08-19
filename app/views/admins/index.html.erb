@@ -1,13 +1,28 @@
 <h1>Popis korisnika</h1>
 
 <table class="table">
-<% @users.each do |user| %>
+<thead>
+	<tr>
+		<th>Email korisnika</th>
+		<th>Pregled korisnika</th>
+		<th>Ukloni korisnika</th>
+	</tr>
+</thead>
+<% @users.each do |user| %> 
   <tr>
-  	<td><b>Email:</b></td> 
-  	<td><%= user.email %></td>
-  	<td><%= link_to 'Pogledaj profil korisnika', {:action => 'show', :id => user.id} %></td>
-    <td><%= link_to 'Ukloni korisnika', {:action => 'delete', :id => user.id} %></td>
+  	<td><b><%= user.email %></b></td>
+  	<td>
+  		<span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+  		<%= link_to 'Pogledaj profil korisnika', {:action => 'show', :id => user.id} %>
+  	</td>
+    <td>
+    	<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+    	<%= link_to 'Ukloni korisnika', {:action => 'delete', :id => user.id} %>
+    </td>
   </tr>
 <% end %>
 </table>
-</div>
+
+<%= will_paginate @users, :class => 'text-center' %>
+
+
