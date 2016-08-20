@@ -1,9 +1,11 @@
-<div class = "row">
-<%= link_to ">> Natrag na listu vijesti", {:action => 'index' } %>
+<div class="row">
+<ol class="breadcrumb">
+  <li> <%= link_to "Sve objave", {:action => 'index' } %></li>
+  <li class="active">Uredi objavu</li>
+</ol>
+</div>
 
-<hr>
-
-<div class="col-md-6 col-md-offset-3">
+<div class="col-md-9 col-md-offset-1">
 
 <%= form_for(:post, :url => {:action => 'update', :id => @post.id}, html: {multipart: true}) do |f| %>
 
