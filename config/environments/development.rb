@@ -45,6 +45,12 @@ Rails.application.configure do
   #PAPERCLIP SETUP
   Paperclip.options[:command_path] = "/usr/bin/"
 
+  # Add the fonts path
+  config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
+
+  # Precompile additional assets
+  config.assets.precompile += %w( .svg .eot .woff .ttf )
+
 
 
 end

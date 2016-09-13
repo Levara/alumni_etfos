@@ -1,3 +1,55 @@
+
+ <nav class="navbar navbar-default navbar-fixed-top nav-down">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><%= image_tag 'logo_brand.svg', :id => 'brand-logo' %>AMA ETFOS</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+
+          <ul class="nav navbar-nav navbar-right">
+            
+            <li class=<% if current_page?(root_path) %>'active'
+            <% else %>'hvr-overline-from-center active'<% end %>>
+            <%= link_to "Početna", root_path %></li>
+            
+            <li class=<% if current_page?(about_path) %>'active'
+            <% else %>'hvr-overline-from-center active'<% end %>>
+            <%= link_to "O udruzi", about_path %></li>
+            
+            <li class=<% if current_page?(statut_path) %>'active'
+            <% else %>'hvr-overline-from-center active'<% end %>>
+            <%= link_to "Statut", statut_path %></li>
+            
+            <li class=<% if current_page?(news_path) %>'active'
+            <% else %>'hvr-overline-from-center active'<% end %>>
+            <%= link_to "Vijesti", news_path %></li>
+            
+            <li class=<% if current_page?(contact_path) %>'active'
+            <% else %>'hvr-overline-from-center active'<% end %>>
+            <%= link_to "Kontakt", contact_path %></li>
+            
+            <% if user_signed_in? %>
+              <li class=<% if current_page?(show_profile_path ) %>'active'
+              <% else %>'hvr-overline-from-center active'<% end %>>
+              <%= link_to "Profil", show_profile_path %></li>
+              <li class="hvr-overline-from-center"><%= link_to "Odjava", logout_path %></li>
+            <% else %>
+              <li><%= link_to "PRIJAVA", login_path, :class => 'hvr-grow' %></li>
+           <% end %> 
+          </ul>
+        </div>
+</nav>
+
+
+
+<!--
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="container">
         <%= link_to "ETFOS Alumni", root_path, id: "logo" %>
@@ -31,3 +83,4 @@
     </nav>
   </div>
 </header>
+-->

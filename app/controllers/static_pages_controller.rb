@@ -9,9 +9,6 @@ class StaticPagesController < ApplicationController
   def statut
   end
 
-  def contact
-  end
-
   def posts
 	 @posts = Post.all
   end

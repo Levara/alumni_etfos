@@ -89,6 +89,14 @@ Rails.application.configure do
   :port => 587,
   :authentication => :plain,
   :enable_starttls_auto => true
-}
+  }
+
+  # Konfiguracija za custom fontove
+  
+  # Add the fonts path
+  config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
+
+  # Precompile additional assets
+  config.assets.precompile += %w( .svg .eot .woff .ttf )
 
 end

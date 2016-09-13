@@ -1,101 +1,1099 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-/* mixins, variables, etc. */
 
-$gray-medium-light: #eaeaea;
+$light_blue: #03ABF4;
+$dark_blue: #05376C;
+$white: #ffffff;
+$gray: #717171;
 
-/* universal */
+$screen-xs-max: 768px;
+$screen-sm-min: 768x;
+$screen-sm-max: 992px;
+$screen-md-min: 992px;
+$screen-md-max: 1200px;
+$screen-lg-min: 1200px;
 
-body {
-  padding-top: 60px;
+
+///////////////////////////////////CUSTOM FONTS\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+@font-face {
+    font-family: 'League Spartan';
+    src: font-url('leaguespartan-bold.eot');
+    src: font-url('leaguespartan-bold.eot?#iefix') format('embedded-opentype'),
+         font-url('leaguespartan-bold.woff2') format('woff2'),
+         font-url('leaguespartan-bold.woff') format('woff'),
+         font-url('leaguespartan-bold.ttf') format('truetype'),
+         font-url('leaguespartan-bold.svg#league_spartanbold') format('svg');
+    font-weight: bold;
+    font-style: normal;
 }
 
-section {
-  overflow: auto;
+@font-face {
+    font-family: 'Gadugi';
+    src: font-url('gadugi.ttf') format('truetype'),
 }
 
-textarea {
-  resize: vertical;
+
+
+///////////////////////////////////GENERAL\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+body, html, section { 
+  margin:   0; 
+  padding:  0; 
+  overflow-x: hidden;
+  background-color: #19b5fe;
 }
 
-.center {
-  text-align: center;
+
+
+///////////////////////////////////SECTIONS\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+.header {
+  background: image-url('header_image.svg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   h1 {
-    margin-bottom: 10px;
+    margin-top: 20rem;
+    margin-left: 4rem;
+    margin-bottom: 2rem;
+    color: $white;
+    line-height: 2;
+  }
+  h5 {
+    margin-bottom: 2rem;
+    margin-left: 4rem;
+    color: white;
+    line-height: 2;
+  }
+} 
+
+@media (max-width: 1200px) {
+  .header {
+    h1 {
+      margin-top: 10rem;
+
+    }
+    h5 {
+      margin-bottom: 1rem,
+    }
   }
 }
 
-/* typography */
-
-h1, h2, h3, h4, h5, h6 {
-  line-height: 1;
+@media (max-width: 992px) {
+  .header {
+    background: image-url('header_image_2.svg') no-repeat center center fixed;
+  }
 }
 
-h1 {
-  font-size: 3em;
-  letter-spacing: -2px;
-  margin-bottom: 30px;
-  text-align: center;
+@media (max-width: 768px) {
+  .header {
+    h1 {
+      margin-top: 3rem;
+
+    }
+    h5 {
+      margin-bottom: 3rem,
+    }
+  }
 }
 
-h2 {
-  font-size: 1.2em;
-  letter-spacing: -1px;
-  margin-bottom: 30px;
-  text-align: center;
-  font-weight: normal;
-  color: $gray-light;
+@media (max-width: 460px) {
+    h1 {
+      margin-top: 3rem;
+      text-align: center;
+      margin-right: 4rem;
+    }
+    h5 {
+      text-align: center;
+      margin-right: 4rem;
+    }
+}
+
+
+.about {
+   width: 100%;
+   margin: 0;
+   padding: 10rem 0;
+   background-color: $white;
+
+   img {
+      height: 50%;
+      width: 50%;
+   }
+
+   p {
+    color: $gray;
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+    line-height: 2; 
+    margin-bottom: 4rem;
+   }
+   h1,h2,h3,h4,h5,h6 {
+    color: $dark_blue;  
+  }
+  h2 {
+    margin-bottom: 6rem;
+  }
+  h4 {
+    margin: 3rem 0;
+  }
+}
+
+.follow {
+   margin: 0;
+   wIdth: 100%;
+   padding: 10rem 0;
+   background: image-url('follow_bg.png') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    h1,h2,h3,h4,h5,h6,p {
+    color: $white;  
+    }
+    h3 {
+    margin-bottom: 2.5rem;
+    }
+    p {
+      line-height: 1.5;
+      margin-bottom: 2rem;
+    }
+}
+
+.action_call {
+   margin: 0;
+   width: 100%;
+   padding: 8rem 0 10rem 0;
+   background-color: $white;
+
+   h1,h2,h3,h4,h5,h6 {
+    color: $dark_blue;  
+    }
+    p {
+      line-height: 2;
+      color: $gray;
+      margin-bottom: 3rem;
+  }
+  h3 {
+    margin-bottom: 2.5rem;
+  }
+
+}
+
+.footer {
+   margin: 0;
+   height: 100%;
+   width: 100%;
+   padding: 6rem 0;
+   background-color: $dark_blue;
+   
+   h1,h2,h3,h4,h5,h6 {
+      color: $white;
+      display: inline; 
+    }
+
+    @media (max-width: 768px) {
+        h1,h2,h3,h4,h5,h6 {
+         margin-top: 5rem;
+      }
+    } 
+
+    p {
+      color: $white;
+      font-family: 'League Spartan', sans-serif;
+      font-size: 10px;
+      letter-spacing: 0px; 
+      line-height: 1.5;
+      }
+  
+
+    a {
+      display: block;
+      font-family: 'League Spartan', sans-serif;
+      font-size: 10px;
+      color: $light_blue;
+      margin-top: 2rem;
+      transition: all 0.3s ease 0s;
+      &:hover {
+        color: $white;
+        text-decoration: none;
+      }
+    }
+    
+    a:first-of-type {
+      margin-top: 3rem;
+    }
+    
+    a:nth-of-type(5) {
+      margin-bottom: 6rem;
+    }
+}
+
+.copyright {
+   margin: 0;
+   wodth: 100%;
+   padding: 5rem 0;
+   background-color: $white;
+    p {
+    line-height: 2;
+    color: $gray;
+    letter-spacing: 2px;
+  }
+}
+
+/////////////////////////////////// NAVBAR \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+.navbar-default {
+  background-color: transparent;
+  border-radius: 0px;
+  border: 0px transparent;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    color: $dark_blue;
+    background-color: transparent;
+}
+
+.navbar .nav > li > a {
+  color: $white;
+  font-family: 'League Spartan', sans-serif;
+  font-size: 1.2rem;
+  border: 0px;
+}
+
+.navbar .nav > li.active  {
+  border-top: 5px solid $dark_blue;
+}
+
+
+.navbar .navbar-brand {
+  visibility: hidden;
+  &:hover {
+    color: $dark_blue;
+  }
+}
+
+@media (min-width: 1200px) {
+
+  .navbar-default {
+    padding-right: 7rem;
+  }
+
+  .navbar .nav > li {
+    padding-top: 4rem;
+    background-color: transparent;
+    border: 0px;
+  }
+
+  .navbar .nav > li:last-of-type {
+    padding-top: 4rem;
+    background-color: transparent;
+  }
+
+
+  .navbar .nav > li > a {
+    color: $white;                        
+    font-family:    'League Spartan', sans-serif;
+    margin-right: 0.65rem;
+    margin-left: 0.65rem;
+    transition: all 0.3s ease 0s;  
+      &:hover {
+        color: $white;  
+      }
+  }
+
+  .navbar .nav > li:last-of-type > a{
+    color: $white;           
+    background-color: $dark_blue;
+    border-radius: 7px;             
+    font-size: 1rem;
+    letter-spacing: 1px;
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+    padding: 0.8rem 1.6rem; 
+    transition: all 0.3s ease 0s;   
+      &:hover {
+        color: $dark_blue;
+        background-color: $white;  
+      }
+  }
+
+  .navbar .nav > li.active {
+    color: $dark_blue;
+    background-color: transparent;
+  }
+
+  .navbar .navbar-brand {
+    visibility: hidden;
+  }
+}
+
+@media (min-width: 768px) {
+
+  .navbar-default {
+    border-radius: 0;
+    background: transparent;
+    border: transparent;
+  }
+
+  .navbar-default .navbar-nav > .open > a,
+  .navbar-default .navbar-nav > .open > a:hover,
+  .navbar-default .navbar-nav > .open > a:focus {
+      color: #555;
+      background: none repeat scroll 0 0;
+      border-left: 1px solid #ddd;
+      border-right: 1px solid #ddd;
+  }
+
+
+  .navbar .nav>li.dropdown.open>.dropdown-toggle, .navbar .nav>li.dropdown.active>.dropdown-toggle, .navbar .nav>li.dropdown.open.active>.dropdown-toggle {
+    background: #fff;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    padding-left: 14px;
+    padding-right: 14px;
+    position: relative;
+    z-index: 9999
+  }
+
+  .navbar .nav>li>.dropdown-menu {
+    border: 0px solid $white;
+    -webkit-border-radius: 0 0 0px 0px;
+    -moz-border-radius: 0 0 0px 0px;
+    border-radius: 0 0 0px 0px;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    min-width: 200px;
+    margin: -1px 0 0;
+    z-index: 9991
+  }
+
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .navbar-default {
+    padding-right: 3rem;
+  }
+    .navbar .navbar-brand {
+    visibility: hidden;
+  }
+
+  .navbar .nav > li {
+    padding-top: 4rem;
+    background-color: transparent;
+    border: 0px;
+    margin-top: 0rem;
+  }
+
+  .navbar .nav > li:last-of-type > a {
+    color: $white;
+    background-color: $dark_blue;
+    border-radius: 7px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+    padding: 0.8rem 1.6rem;          
+      &:hover {
+        color: $dark_blue;
+        background-color: $white;  
+      }
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-default {
+    padding-right: 0rem;
+  }
+  .navbar-fixed-top {
+    position: relative; 
+  }
+  .navbar-default .navbar-brand {
+    visibility: visible;
+    color: $white;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 2rem;
+  }
+  .navbar-default .navbar-toggle .icon-bar {
+    background-color: $white;
+  }
+
+  .navbar-default .navbar-toggle {
+    border-color: $dark_blue;
+    background: $dark-blue;
+  }
+
+  .navbar-default .navbar-toggle.collapsed {
+    border-color: $dark_blue;
+    background: $dark-blue;
+  }
+
+}
+
+///////////////////////////////////TYPOGRAPHY\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'League Spartan', sans-serif;
+  letter-spacing: 1px;
 }
 
 p {
-  font-size: 1.1em;
-  line-height: 1.7em;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
 }
 
+.text-justify {
+  text-align: justify;
+}
 
-/* header */
+a.social-link {
+  padding-top: 1rem;
+}
 
-#logo {
-  float: left;
-  margin-right: 10px;
-  font-size: 1.7em;
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: -1px;
-  padding-top: 9px;
-  font-weight: bold;
-  &:hover {
-    color: white;
-    text-decoration: none;
+@media (max-width: 460px) {
+ .social-link {
+    margin-left: 3em;
+  } 
+  #social-headline {
+    margin-left: 3rem;
   }
 }
 
-/* footer */
 
-footer {
-  margin-top: 45px;
-  padding-top: 5px;
-  border-top: 1px solid $gray-medium-light;
-  color: $gray-light;
-  a {
-    color: $gray;
+
+///////////////////////////////////ICONS AND IMAGES\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+.social {
+  display: block;
+  height: 16%;
+  width: 16%;
+  margin: 3.5rem;
+  margin-top: 4rem;
+  opacity: 0.9;
     &:hover {
-      color: $gray-darker;
+      opacity: 1;
+    }
+}
+
+@media only screen and (max-width : 768px) {
+  .social {
+    display: inline;
+    height: 5rem;
+    width: 5rem;
+    margin: 2rem;
+    margin-top: 10rem;
+  }
+}
+
+.social-footer {
+  height: 2rem;
+  width: 2rem;
+  margin-top: 3.5rem;
+  float: right;
+}
+
+
+@media (max-width: 460px) {
+  .social-footer {
+    margin-right: -4rem;
+  }
+}
+
+#mail-icon {
+  height: 30px;
+  width:  30px;
+  margin-right: 0.5em;
+}
+
+
+#contact {
+  height: 60px;
+  width: 60px;
+  margin-left: -10rem;
+  margin-right: 3rem;
+}
+
+#pages img {
+  height: 40px;
+  width: 40px;
+  margin-left: -7rem;
+  margin-right: 2rem;
+  float: right;
+}
+
+#social-img {
+  height: 40px;
+  width: 40px;
+  margin-left: 0px;
+  float: right;
+}
+
+@media (max-width: 768px) {
+  #social-img {
+    margin-top: 5rem;
+  }
+  #pages img:first-of-type {
+    margin-top: 5rem;
+  }
+}
+
+#social-headline, #pages-headline {
+  display: block;
+}
+
+#location {
+  height: 100px;
+  width: 100px;
+  margin-left: -7rem;
+  margin-right: 2rem;
+  margin-top: -0.5rem;
+}
+
+#footer-logos {
+    height: 12rem;
+    width: 24rem;
+    display: block;
+    margin-top: 12rem;
+    margin-bottom: 5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#btn-icon-1 {
+  height: 3rem;
+  width: 3rem;
+  margin-right: 2rem;
+}
+
+#btn-icon-2 {
+  height: 3rem;
+  width: 3rem;
+  margin-right: 3.5rem;
+}
+
+#logo-header-1 {
+  height: 35rem;
+  width: 35rem;
+  margin-top: 8rem;
+  margin-bottom: -2rem;
+}
+
+#logo-header-2 {
+  height: 10rem;
+  width: 40rem;
+  margin-bottom: 16rem;
+}
+
+@media (max-width: 992px) {
+  #logo-header-1 {
+    display: none;
+  }
+   #logo-header-2 {
+    display: none;
+  }
+}
+
+#brand-logo {
+  height: 9rem;
+  width: 9rem;
+  display: inline;
+  vertical-align: middle;
+}
+
+@media(max-width: 768px) {
+  #brand-logo {
+    display: none;
+  }
+}
+
+
+///////////////////////////////////FORMS AND BUTTONS\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+#newsletter {  
+  .btn-newsletter {
+  margin-top: 2rem;
+  color: $white;
+  border: solid 2px $white;
+  border-radius: 0px;
+  padding: 2rem 0rem;
+  width: 32rem;
+  background-color: transparent;
+  font-family: 'League Spartan', sans-serif;
+  font-size: 12px;
+  letter-spacing: 1px;  
+  transition: all 0.3s ease 0s;
+      &:hover {
+        color:$light_blue;
+        border: solid 2px $white;
+        background-color: $white;
+        opacity: 0.9;
     }
   }
-  small {
-    float: left;
+  label {
+    color: $white;
+    letter-spacing: 1px;
+    font-family: 'League Spartan', sans-serif;
   }
-  ul {
-    float: right;
-    list-style: none;
-    li {
-      float: left;
-      margin-left: 15px;
+  input[type="email"] {
+    
+    outline: none;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+    
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-bottom: solid 2px $white;
+    border-radius: 0px;
+    background-color: rgba(0,0,0,0) !important;
+    width: 32rem;
+    color: $white;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 1.2rem;
+
+    &:focus {
+      outline: none;
+      border-bottom: solid 3px $white;
+      border-radius: 5px;
+    }
+
+    &:hover {
+      outline: none;
+      border-bottom: solid 3px $white;
+      border-radius: 5px;
+    }
+
+  }
+  ::-webkit-input-placeholder {
+   color: $white;
+   opacity: 0.7;  
+   letter-spacing: 1px;
+   font-family: 'Noto Sans', sans-serif;
+  }
+
+  :-moz-placeholder { 
+   color: $white;
+   opacity: 0.7;  
+   letter-spacing: 1px;
+   font-family: 'Noto Sans', sans-serif;
+  }
+
+  ::-moz-placeholder {  
+   color: $white; 
+   opacity: 0.7;   
+   background-color: transparent;
+   letter-spacing: 1px;
+   font-family: 'Noto Sans', sans-serif;
+  }
+
+  :-ms-input-placeholder {  
+   color: $white;  
+   opacity: 0.7;  
+   background-color: transparent;
+   letter-spacing: 1px;
+   font-family: 'Noto Sans', sans-serif;
+  }
+}
+
+.btn-member {  
+  margin-top: 2rem;
+  display: block;
+
+  color: $light_blue;
+  background-color: $white;
+  
+  
+  border-radius: 0px;
+  border: 3px solid $light_blue;
+  padding-left: 3rem; 
+  padding-right: 6rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  
+  font-family: "League Spartan", sans-serif;
+  font-size: 2rem;
+  letter-spacing: 1px;
+
+  //transition: all 0.3s ease 0s;
+      &:hover {
+        color:$white;
+        background-color: $light_blue;
+        text-decoration: none;
+    }
+  
+  img {
+    height: 20%;
+    width: 20%;
+    margin-right: 2rem;
+  }
+}
+
+@media(max-width: 660px) {
+  .btn-member {
+    font-size: 1.5rem;
+  }
+}
+
+#contact-form {
+  padding-left: 0px;
+  margin-top: 2rem;
+
+  .btn-contact {
+      margin-top: 1rem;
+      border-radius: 0px;
+      border: 1px solid $light_blue;
+      background-color: transparent;
+      padding: 1.5rem 8rem; 
+      color: $white;
+      font-family: 'League Spartan', sans-serif;
+      letter-spacing: 1px;
+      font-size: 10px;
+      float: right;
+
+      transition: all 0.3s ease 0s;
+      &:hover {
+        border: 1px solid $light_blue;
+        background-color: $light_blue;
+        text-decoration: none;
+      }
+  }
+
+  label {
+    color: $white;
+    letter-spacing: 1px;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 10px;
+  }
+
+
+
+  input[type="email"], input[type="text"], textarea {
+    outline: none;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    color: white;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 1.2rem;
+    opacity: 0.9;
+    border-bottom: solid 1px $light_blue;
+    border-radius: 0px;
+    background-color: rgba(0,0,0,0);
+    transition: all 0.1s ease 0.1s;
+    &:focus {
+      outline: none;
+      border-bottom: solid 3px $light_blue;
+      border-radius: 5px;
+      color: $white;
+      font-family: 'Noto Sans', sans-serif;
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+    &:hover {
+      outline: none;
+      border-bottom: solid 3px $light_blue;
+      border-radius: 5px;
+      color: $white;
+      font-family: 'Noto Sans', sans-serif;
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+  }
+  textarea {
+    &:focus {
+      border-bottom: solid 3px $light_blue;
+      background-color: rgba(3,171,244,0.1);
+      border-radius: 5px;
     }
   }
 }
+
+.btn.btn-header-1 {
+  display: inline;
+  margin-bottom: 2rem;
+  margin-right: 4rem;
+  margin-left: 4rem;
+  
+  border: solid 2px $dark_blue;
+  border-radius: 0px;
+  background-color: $dark_blue;
+  color: white;
+  font-family: 'League Spartan', sans serif;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  padding-left: 2rem;
+  padding-right: 4rem;
+      &:hover {
+      outline: none;
+      background-color: $white;
+      color: $light_blue;
+      border: $white solid 2px;
+      opacity: 0.9;
+    }
+}
+
+.btn.btn-header-2 {
+  display: block;
+  margin-bottom: 6rem;
+  margin-left: 4rem;
+  border: solid 2px $white;
+  border-radius: 0px;
+  background-color: transparent;
+  color: white;
+  font-family: 'League Spartan', sans serif;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  padding-left: 2.5rem;
+  padding-right: 6.5rem;
+  text-align: center;
+      &:hover {
+      outline: none;
+      background-color: $white;
+      color: $light_blue;
+      opacity: 0.9;
+    }
+}
+ 
+@media only screen and (min-width : 1280px) {
+      .btn.btn-header-1 {
+        display: inline;
+        margin-right: 1rem;
+        margin-left: 4rem;
+        margin-top: 0rem;
+        margin-bottom: 0rem;
+      }
+
+      .btn.btn-header-2 {
+          display: inline;
+          margin: 2rem 0rem;
+      } 
+}
+
+@media only screen and (max-width : 480px) {
+      .btn.btn-header-1 {
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+
+      }
+
+      .btn.btn-header-2 {
+          display: block;
+          margin-right: auto;
+          margin-left: auto;
+      } 
+}
+
+
+////ANIMATIONS////////////////////////////////////////////////////////////////
+
+.slideanim {visibility:hidden;}
+.slide {
+    
+    animation-name: slide;
+    -webkit-animation-name: slide; 
+   
+    animation-duration: 1.5s; 
+    -webkit-animation-duration: 1.5s;
+    visibility: visible; 
+}
+
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+    } 
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+    } 
+}
+@-webkit-keyframes slide {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+    } 
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+    }
+}
+
+
+@media (min-width: 768px) {
+
+  .hvr-overline-from-center {
+    //display: inline-block;
+    //vertical-align: middle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+    overflow: hidden;
+  }
+  .hvr-overline-from-center:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    right: 50%;
+    top: 0;
+    background: $dark_blue;
+    height: 5px;
+    -webkit-transition-property: left, right;
+    transition-property: left, right;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+  }
+  .hvr-overline-from-center:hover:before, .hvr-overline-from-center:focus:before, .hvr-overline-from-center:active:before {
+    left: 0;
+    right: 0;
+  }
+
+
+  .hvr-grow {
+    //display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+  }
+  .hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  ///////////////////////////////ANIMATION ON LOAD OF THE PAGE\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+  #logo-header-1, #logo-header-2, .header h1, .header h5  {
+    -webkit-animation: fadein 4s; 
+       -moz-animation: fadein 4s; 
+        -ms-animation: fadein 4s; 
+         -o-animation: fadein 4s; 
+            animation: fadein 4s;
+  }
+
+  @keyframes fadein {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+  }
+
+
+  @-moz-keyframes fadein {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+  }
+
+
+  @-webkit-keyframes fadein {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+  }
+
+
+  @-ms-keyframes fadein {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+  }
+
+
+  @-o-keyframes fadein {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+  }
+
+
+}
+
+//////////// SCROLL NAVBAR \\\\\\\\\\\\\
+
+.nav-down {
+  margin-top: 0px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.nav-up {
+  margin-top: -130px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.nav-scrolled .nav > li > a {
+  color: $dark_blue;
+  font-family: 'League Spartan', sans-serif;
+  font-size: 1.2rem;
+  border: 0px;
+      &:hover {
+        color: $light_blue;
+    }
+}
+
+.nav-scrolled .nav > li.active  {
+  border-top: 5px solid $dark_blue;
+}
+
+.nav-scrolled .nav > li:last-of-type > a {
+  background-color: $light_blue;
+  color: $white;
+    &:hover {
+        color: $white;
+        background-color: $light_blue;
+    }
+}
+
+
+.nav-scrolled .navbar-brand {
+  display: inline;
+  visibility: visible;
+  color: $dark_blue;
+  font-family: 'League Spartan', sans-serif;
+  font-size: 2rem;
+  margin-left: 2rem;
+}
+
+
+.nav-scrolled .hvr-overline-from-center:before {
+  background: $light_blue;
+}
+
+
+
+
 
 
 

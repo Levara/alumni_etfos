@@ -1,4 +1,4 @@
- @import 'bootstrap/variables';
+@import 'bootstrap/variables';
 
 $light_blue: #03ABF4;
 $dark_blue: #00324F;
@@ -10,6 +10,10 @@ $roboto: 'Roboto', sans-serif;
 
 
 /* General */
+
+html, body {
+  background-color: $white;
+}
 
 #admin-area {
     height: 100%;
@@ -149,6 +153,57 @@ input[type="email"], input[type="password"], input[type="text"], input[type="fil
     opacity: 1;
   }
 }
+
+
+.nav-pills li:first-of-type > a {
+  color: $whitesmoke;
+  font-weight: bold;
+  font-size: 1.3rem;
+  opacity: 0.7;
+  padding: 1.5rem 2rem;
+  border-radius: 0px;
+  transition: 0.3s ease;
+  &:visited {
+    background-color: $dark_blue;
+    opacity: 0.7;
+  }
+  &:active {
+    background-color: $dark_blue;
+    opacity: 0.7;
+  }
+  &:hover {
+    background-color: $dark_blue;
+    opacity: 0.7;
+  }
+}
+
+
+.nav-pills li > a {
+  color: $whitesmoke;
+  font-weight: bold;
+  font-size: 1.3rem;
+  opacity: 0.7;
+  padding: 1.5rem 2rem;
+  border-radius: 0px;
+  transition: 0.3s ease;
+  z-index: 1;
+  &:visited {
+    background-color: #00101a;
+    opacity: 1;
+  }
+  &:active {
+    background-color: #00101a;
+    opacity: 1;
+  }
+  &:hover {
+    background-color: $light_blue;
+    opacity: 1;
+  }
+}
+
+
+
+
 
 .nav-pills li.active > a  {
   opacity: 1;

@@ -1,15 +1,120 @@
-<div class="container">
-<footer class="footer">
-  <small>
-    The <a href="http://www.railstutorial.org/">Ruby on Rails Tutorial</a>
-    by <a href="http://www.michaelhartl.com/">Michael Hartl</a>
-  </small>
-  <nav>
-    <ul>
-      <li><%= link_to "O udruzi",   about_path %></li>
-      <li><%= link_to "Kontakt", contact_path %></li>
-      <li><%= link_to "Vijesti", news_path %></li>
-    </ul>
-  </nav>
-</footer>
-</div>
+<section class="footer">
+
+     <div class="container">         
+
+        <div class="row">
+          <div class="col-xs-10 col-sm-5 col-md-5 col-lg-5 col-xs-push-1">   
+            <%= image_tag 'contact.svg', :class => 'hvr-grow', :id => 'contact' %>
+            <h4>KONTAKT</h4>
+             <form id="contact-form">    
+              <div class="form-group">       
+                <label for="exampleInputEmail1">IME I PREZIME</label>
+                <input type="text" class="form-control" id="contactName" placeholder=""/>             
+              </div>
+
+              <div class="form-group">       
+                <label for="exampleInputEmail1">EMAIL</label>
+                <input type="email" class="form-control" id="contactEmail" placeholder=""/>
+              </div>
+
+              <div class="form-group">       
+                <label for="exampleInputEmail1">PORUKA</label>
+                <textarea rows="4" class="form-control" id="contactMessage" placeholder=""></textarea>
+              </div>
+              
+              <button class="btn-contact" type="submit">POŠALJI</button>
+            </form>
+          </div>
+
+          <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 col-sm-push-2 col-md-push-2 col-lg-push-2" id="pages">   
+            
+
+            <div class="row">
+                <div class="col-xs-4 col-sm-2 col-md-2 col-lg-2 col-sm-pull-1 col-md-pull-1 col-lg-pull-1">
+                   <%= image_tag 'pages.svg', :class => 'hvr-grow'%>
+                </div>
+                <div class="col-xs-6 col-sm-9 col-md-9 col-lg-9 col-sm-pull-2 col-md-pull-2 col-lg-pull-2">
+                  <h5 id="pages-headline">STRANICE</h5>
+                    <%= link_to "Početna", root_path %>
+                    <%= link_to "O udruzi", about_path %>
+                    <%= link_to "Statut", statut_path %>
+                    <%= link_to "Vijesti", news_path %>
+                    <%= link_to "Kontakt", contact_path %>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-4 col-sm-2 col-md-2 col-lg-2 col-sm-pull-1 col-md-pull-1 col-lg-pull-1">
+                  <%= image_tag 'location.svg', :class => 'hvr-grow', :id => 'location' %>
+                </div>
+                <div class="col-xs-6 col-sm-9 col-md-9 col-lg-9 col-sm-pull-2 col-md-pull-2 col-lg-pull-2">
+                    <p>Udruga inženjera i diplomiranih inženjera <br>Fakulteta elektrotehinike, računarstva i informacijskih tehnologija
+                    <br><br>Kneza Trpimira 2b<br>31000 Osijek<br>Hrvatska</p>
+                </div>
+            </div>
+
+          </div>
+
+          <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 col-sm-push-3 col-md-push-3 col-lg-push-3">   
+              
+              <div class="row">
+                  <div class="col-xs-3 col-sm-2 col-md-2 col-lg-2 col-sm-pull-1 col-md-pull-1 col-lg-pull-1">
+                    <%= image_tag 'social.svg', :class => 'hvr-grow', :id => 'social-img' %>
+                  </div>
+                  <div class="col-xs-6 col-sm-9 col-md-9 col-lg-9 col-sm-pull-1 col-md-pull-1 col-lg-pull-1">
+                    <h5 id="social-headline">SOCIAL</h5>
+                  </div>
+              </div>
+
+
+              <div class="row">
+                  <div class="col-xs-4 col-sm-2 col-md-2 col-lg-2 col-sm-pull-1 col-md-pull-1 col-lg-pull-1">
+                    <%= image_tag 'facebook.svg', :class => 'social-footer' %>
+                  </div>
+                  <div class="col-xs-6 col-sm-9 col-md-9 col-lg-9 col-sm-pull-1 col-md-pull-1 col-lg-pull-1">
+                     <a href="https://www.facebook.com/ama.etfos/" class="social-link">Facebook</a>
+                  </div>
+              </div>
+
+              <div class="row">
+                <div class="col-xs-4 col-sm-2 col-md-2 col-lg-2 col-sm-pull-1 col-md-pull-1 col-lg-pull-1">
+                  <%= image_tag 'twitter.svg', :class => 'social-footer' %>
+                </div>
+                 <div class="col-xs-6 col-sm-9 col-md-9 col-lg-9 col-sm-pull-1 col-md-pull-1 col-lg-pull-1">
+                  <a href="#" class="social-link">Twitter</a>
+                </div>
+              </div>
+
+
+              <div class="row">
+                <div class="col-xs-4 col-sm-2 col-md-2 col-lg-2 col-sm-pull-1 col-md-pull-1 col-lg-pull-1">
+                  <%= image_tag 'instagram.svg', :class => 'social-footer' %>
+                </div>
+                 <div class="col-xs-6 col-sm-9 col-md-9 col-lg-9 col-sm-pull-1 col-md-pull-1 col-lg-pull-1">
+                  <a href="#" class="social-link">Instagram</a>
+                </div>
+              </div>
+              
+              <div class="row">
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-sm-pull-1 col-sm-pull-4 col-md-pull-4 col-lg-pull-4 col-sm-pull-4">
+                  <%= image_tag 'logos.svg', :class => 'img-responsive', :id => 'footer-logos' %>
+                </div>
+              </div>
+
+          </div>
+
+         
+          </div>
+        </div>
+    </div>
+  </section>
+
+  <section class="copyright">
+
+     <div class="container">         
+        <div class="row">
+            <p class="text-center">Copyright AMA ETFOS 2016</p>    
+        </div>
+    </div>
+  
+  </section>

@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   get  'o-udruzi'  =>  'static_pages#about',    as: :about
   get  'statut'    =>  'static_pages#statut',   as: :statut
-  get  'kontakt'   =>  'static_pages#contact',  as: :contact
+  get  'kontakt'   =>  'contacts#new',  as: :contact
   get  'vijesti'   =>  'static_pages#posts',    as: :news
   get  'vijest/:id'=>  'static_pages#single_post'
  
