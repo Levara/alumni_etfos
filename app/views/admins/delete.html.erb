@@ -1,9 +1,9 @@
-<h1>Brisanje korisnika</h1>
+<h2>Brisanje korisnika</h2>
 
 <%= form_for(:user, :url => {:action => 'destroy', :id => @user.id}) do |f| %>
 
-<p>Jeste li sigurni da želite ukloniti <%= @user.email %></p>
+<h5>Jeste li sigurni da želite ukloniti <%= @user.email %>?</h5>
 
-<%= submit_tag ('Ukloni korisnika!') %>
+<%= submit_tag ('Ukloni korisnika'), :class => 'btn btn-primary'  %>
 
 <%end%>

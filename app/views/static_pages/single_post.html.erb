@@ -1,12 +1,88 @@
-<h1><%= @post.title %></h1>
+<% provide(:title, "Vijesti") %>
 
-<div class="col-md-10">
+<section class="section-news">
 
-<%= image_tag @post.image.url(:large) %>
+<section class="subnavbar">
+    <div class="container">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><%= link_to "News", news_path %></li>
+        <li class="breadcrumb-item active"> <%= @post.title %> </li>
+      </ol>
+    </div>
+</section>
 
-<p><%= @post.content %></p>
-<p>Autor: <%= @post.updated_at %> </p>
-<p>Kreirano: <%= @post.created_at %></p>
-<p>Zadnje izmjene: <%= @post.updated_at %> </p>
+
+<section class="main-area">
+
+<div class="container">
+
+<div class="row">
+
+
+<div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
+    <div class="row">
+      <h2><%= @post.title %></h2>
+      <h5>Blog +1 mustache post-ironic. Dreamcatcher letterpress next level beard etsy post-ironic, 90's swag wolf fanny pack VHS ramps.</h5>
+      <p><b>Datum:</b> <%= @post.created_at %> <b>Autor:</b> Hrvoje Leventić </p>
+
+      <%= image_tag @post.image.url(:medium), :class => "img-responsive hvr-grow news-photo" %>
+      <!--<img src="images/aaPhotos/workshop.jpg" alt="Novosti - slika." class="img-responsive hvr-grow news-photo"/>-->
+
+      <p><%= @post.content + " " %>Trust fund viral artisan post-ironic tattooed kinfolk, blog brunch. Gastropub DIY celiac aesthetic austin shoreditch. Selfies pug fanny pack direct trade. Neutra wayfarers organic, four loko artisan photo booth skateboard tacos semiotics cronut. Semiotics brunch mustache blue bottle asymmetrical. Selfies franzen meditation everyday carry pork belly readymade. Blue bottle tofu skateboard sustainable venmo mlkshk yr kale chips cronut.<br><br>
+
+      Selvage tofu chartreuse affogato, marfa readymade cornhole seitan williamsburg vinyl leggings try-hard. Disrupt occupy pop-up affogato locavore. Pitchfork schlitz fingerstache, DIY marfa plaid celiac biodiesel selfies humblebrag sustainable. Waistcoat wolf yr authentic, microdosing hella selvage freegan. Literally kogi gluten-free pickled. Quinoa listicle tousled authentic, gentrify vinyl lumbersexual shabby chic retro semiotics 8-bit mustache 3 wolf moon cold-pressed flexitarian. DIY trust fund tattooed messenger bag pabst.<br><br>
+
+      Four loko fashion axe marfa trust fund butcher. Stumptown <b>ramps kale chips kinfolk</b> asymmetrical locavore. Ugh roof party lo-fi cold-pressed, artisan etsy pork belly gentrify green juice semiotics single-origin coffee flannel. Pork belly keytar roof party dreamcatcher etsy, fixie art party sartorial echo park occupy selfies. Wolf fanny pack butcher chartreuse helvetica kale chips, bicycle rights hoodie affogato swag pop-up twee raw denim single-origin coffee. Mixtape green juice roof party food truck +1 chia. Wolf church-key ramps 90's, slow-carb pitchfork microdosing.<br><br>
+
+      Cray leggings four loko, everyday carry heirloom meh bicycle rights pop-up gentrify godard hella synth flexitarian sriracha actually. Marfa cred fashion axe, gastropub +1 stumptown slow-carb pug pinterest hoodie sustainable pop-up microdosing seitan hammock. Affogato yuccie vegan swag whatever hammock crucifix. 8-bit chartreuse synth letterpress. Kinfolk echo park vinyl, twee affogato authentic trust fund umami schlitz pour-over keffiyeh artisan banjo lumbersexual pop-up. Pork belly post-ironic knausgaard ramps tumblr. Literally beard authentic echo park.
+      </p>
+    </div>
+</div>
+
+
+  <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 col-lg-push-1 col-md-push-1 col-sm-push-1">  
+      
+     <div class="row"> 
+      <div class="become-member">
+        <h4>UKLJUČI SE I TI!</h4>
+        <p class="text-center">Waistcoat gentrify kickstarter, sapiente blue bottle gluten-free knausgaard irony sed chambray. Lo-fi food truck butcher irure venmo.</p>
+            <button class="btn-member center-block hvr-grow">
+              <%= image_tag 'member_3.svg', :id => 'btn-icon-member' %>
+              POSTANI ČLAN
+            </button>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="social-networks">
+        <a href="#"><%= image_tag 'facebook.svg', :class =>'social hvr-grow', :id => 'fb-icon' %></a>
+        <a href="#"><%= image_tag 'twitter.svg', :class =>'social hvr-grow', :id => 'tw-icon' %></a>
+        <a href="#"><%= image_tag 'instagram.svg', :class =>'social hvr-grow', :id => 'inst-icon' %></a>
+      </div>
+    </div>
+
+    <div class="row">    
+        <div class="subscribe">
+          <h4 class="text-center">PRATI NAŠ RAD</h4>
+            <p class="text-center">Waistcoat gentrify kickstarter, sapiente blue bottle gluten-free. </p>
+            
+            <form id="newsletter">
+              <div class="form-group">
+                <%= image_tag 'mail.svg', :class =>'social hvr-grow', :id => 'mail-icon' %>
+                <label for="exampleInputEmail1">Email adresa</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="diplomski.rad@gmail.com">
+              </div>
+              <button class="btn-newsletter hvr-grow" type="submit">SUBSCRIBE</button>
+            </form>
+        </div>
+    </div>
+ 
+    </div>
+
 
 </div>
+
+</section>
+</section>
+

@@ -9,8 +9,9 @@
 
 <div class="col-md-9 col-md-offset-1">
 
-<%= image_tag @post.image.url(:medium), :class => 'post-img' %>
+<%= image_tag @post.image.url(:medium), :class => 'img-responsive news-photo' %>
 
+<br>
 <p class="post-txt"><%= @post.content %></p>
 
 <p>Kreirano: <%= @post.created_at %></p>

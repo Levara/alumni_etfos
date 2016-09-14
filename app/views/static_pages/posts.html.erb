@@ -1,13 +1,49 @@
 <% provide(:title, "Vijesti") %>
+<section class="section-news">
+<section class="title-area">
+  <div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
+        <h1>NOVOSTI</h1>
+        <h4>Udruga inženjera i diplomiranih inženjera Fakulteta elektrotehnike, računarstva i informacijskih tehnologija Osijek </h4>
+    </div>
+  </div>
+  </div>
+</section>
 
-<h1>Vijesti</h1>
 
-<% @posts.each do |post| %>
-	<div class="col-md-4">
-		<%= image_tag post.image.url(:medium), :class => 'img-thumbnail'%>
-		<h2><%= post.title %></h2>
-		<p><%= first_20(post.content) %></p>
-		<%= link_to "Pročitaj više", {:action => 'single_post', :id => post.id}, :class => 'btn btn-primary'%>
-	</div>
-<%end%>
+<section class="news-area">
+
+<div class="container">
+
+	<% @posts.each do |post| %>
+		<div class="row">
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+				<%= image_tag post.image.url(:medium), :class => 'img-responsive hvr-grow news-photo'%>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-5 col-lg-5 col-md-push-1 col-lg-push-1">
+				<h3><%= post.title %></h3>
+				<h6>24. lipnja 2016.</h6>
+				<p><%= first_20(post.content) %></p>
+				<%= link_to "VIŠE", {:action => 'single_post', :id => post.id}, :class => 'btn btn-primary btn-news hvr-grow'%>
+			</div>
+		</div>
+		<hr>
+	<%end%>
+
+  
+  <div class="text-center">
+    <%= will_paginate @posts, :class => 'text-center'%>
+  </div>
+
+</div>
+
+</section>
+
+</section>
+
+
+
+
+
 

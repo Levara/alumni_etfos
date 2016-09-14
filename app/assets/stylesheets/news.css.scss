@@ -1,0 +1,244 @@
+ /* Colors */
+
+$light_blue: #03ABF4;
+$dark_blue: #05376C;
+$white: #FFFFFF;
+$whitesmoke: #F0F0F0;
+$gray: #717171;
+
+
+.section-news {
+
+	.header {
+		background-color: $white;
+	}
+
+	 .title-area {
+      background: image-url('news_header.svg') no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover; 
+    padding: 6rem 0;
+    display: block;
+    margin-top: 10rem;
+    h1 {
+      color: $white;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+    h4 {
+      color: $white;
+      margin-bottom: 2rem;
+      line-height: 2;
+    }
+  }
+
+	.main-area {
+		background-color: $white;
+	}
+
+	.news-area {
+		padding: 6rem 0;
+		background-color: $white;
+		h3 {
+			line-height: 2;
+			color: $dark_blue;
+		}
+		h6 {
+			color: $gray;
+			margin: 1rem 0;
+		}
+		p {
+			color: $gray;
+			font-size: 1.2rem;
+			line-height: 1.8;
+	  		font-family: 'Noto Sans', sans-serif;
+		}
+		.row {
+			margin: 4rem 0;
+		}
+	}
+
+	.news-photo {
+		border-radius: 7px;
+	}
+
+	.btn-news {
+		color: $dark-blue;
+		background-color: transparent;
+		border: 2px solid $light_blue;
+		border-radius: 0px;
+		padding: 1rem 3rem;
+		float: right;
+		margin-top: 2rem;
+		margin-bottom: 1rem;
+		font-family: 'League Spartan', sans-serif;
+		font-size: 1.2rem;
+		letter-spacing: 1px;
+		&:hover {
+			background-color: $dark_blue;
+			color: $white;
+			border: $dark_blue 2px solid;
+		}
+	}
+
+	hr {
+		color: $light_blue;
+	}
+
+	/* Single News */
+
+
+	.breadcrumb {
+		font-family: 'League Spartan', sans-serif;
+		background-color: transparent;
+		font-size: 1.2rem;
+		margin-top: 14rem;
+		margin-bottom: 2rem;
+		float: left;
+	}
+	.breadcrumb-item > a {
+		color: $light_blue;
+		opacity: 0.9;
+	}
+
+	.breadcrumb > .active  {
+		color: $white;
+	}
+
+	.subnavbar {
+		background-color: $dark_blue;
+		margin-bottom: 0rem;
+	}
+
+	.pagination {
+		font-family: 'Noto Sans', sans-serif;
+	}
+
+	.main-area {
+		margin-top: 0rem;
+		padding: 3rem 0;
+
+		h2 {
+			color: $dark_blue;
+			line-height: 2;
+		}
+		h5 {
+			color: $gray;
+			line-height: 2;
+		}
+		p {
+			color: $gray;
+			letter-spacing: 1px;
+			line-height: 2;
+			margin: 3rem 0;
+		}
+	}
+
+	.become-member {
+		margin-top: 3rem;
+	}
+
+	.subscribe p {
+		color: $white;
+	}
+
+	@media(max-width: 768px) {
+		.subnavbar {
+			display: none;
+		}
+		.main-area {
+			padding: 6rem 0;
+		}
+	}
+
+	/* Side stuff */
+	.become-member {
+		background-color: $white;
+		border: 2px solid $light_blue;
+		padding: 5rem 1rem;
+		h4 {
+			color: $dark_blue;
+			text-align: center;
+			margin-bottom: 2rem;
+		}
+		p {
+			color: $gray;
+		}	
+	}
+
+	.btn-member {
+		font-size: 1.5rem;
+		padding-right: 2rem;
+		padding-left: 1rem;
+		letter-spacing: 0px;
+		color: $white;
+		background-color: $light_blue;
+	}
+
+	#btn-icon-member {
+		margin-right: 1rem;
+	}
+
+	.social-networks {	
+		background-color: $dark_blue;
+		margin: 2rem 0;
+		padding: 1rem 2rem;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+	}
+
+	.social {
+		margin: 2rem 2rem;
+		padding: 0;
+		height: 5rem;
+		width: 5rem;
+		opacity: 1;
+		display: inline;
+	}
+
+	.subscribe {
+		//background: url('follow_bg.png') no-repeat center center fixed;
+		background-color: $light-blue;
+		padding: 4rem 3rem;
+		text-align: text-center;
+		h4 {
+			color: $white;
+			margin-bottom: 2rem;
+		}
+		p {
+			color: $white;
+			margin-bottom: 2rem;
+		}
+	}
+
+	#newsletter .btn-newsletter {
+		color: white;
+		width: 20rem;
+		padding: 2rem 3rem;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+		&:hover {
+			color: $light_blue;
+		}
+	}
+
+	#newsletter input[type="email"] {
+		width: 20rem;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+	}
+
+	#newsletter label {
+		font-size: 1.2rem;
+	}
+
+	#newsletter #mail-icon {
+		margin-left: 5rem;
+	}
+}

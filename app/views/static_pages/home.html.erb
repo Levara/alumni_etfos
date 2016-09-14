@@ -1,4 +1,5 @@
-<section class="header">
+<% provide(:title, "Početna") %>
+  <section class="header">
     <div class="container-fluid">
       
       <div class="row">
@@ -13,12 +14,12 @@
           <h5>Udruga inženjera i diplomiranih inženjera fakulteta elektrotehnike, računarstva i informacijskih
           tehnologija Osijek</h5>
                   
-            <button class="btn btn-header-1 hvr-grow">
+            <button class="btn btn-header-1 hvr-grow" onclick = "location.href='registracija'">
               <%= image_tag 'register.svg', :id => 'btn-icon-1' %>
               REGISTRACIJA
             </button>
 
-            <button class="btn btn-header-2 hvr-grow">
+            <button class="btn btn-header-2 hvr-grow" onclick = "location.href='prijava'">
               <%= image_tag 'login.svg', :id => 'btn-icon-2' %>
               PRIJAVA
             </button>
@@ -28,12 +29,12 @@
       </div>
 
     </div>
-</section>
+  </section>
 
 
 
 
-<section class="about">
+  <section class="about">
 
      <div class="container">         
       <div class="row">

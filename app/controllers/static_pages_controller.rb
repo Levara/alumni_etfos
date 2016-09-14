@@ -10,7 +10,7 @@ class StaticPagesController < ApplicationController
   end
 
   def posts
-	 @posts = Post.all
+	 @posts = Post.all.paginate(:page => params[:page], :per_page => 5)
   end
 
   def single_post

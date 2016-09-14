@@ -1,5 +1,4 @@
-
- <nav class="navbar navbar-default navbar-fixed-top nav-down">
+<nav class="navbar navbar-default navbar-fixed-top nav-down" <% unless current_page?(root_path) %> id = 'navbar2' <% end%>>
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
             <span class="sr-only">Toggle navigation</span>
@@ -16,28 +15,28 @@
           <ul class="nav navbar-nav navbar-right">
             
             <li class=<% if current_page?(root_path) %>'active'
-            <% else %>'hvr-overline-from-center active'<% end %>>
+            <% else %>'hvr-overline-from-center'<% end %>>
             <%= link_to "Početna", root_path %></li>
             
             <li class=<% if current_page?(about_path) %>'active'
-            <% else %>'hvr-overline-from-center active'<% end %>>
+            <% else %>'hvr-overline-from-center'<% end %>>
             <%= link_to "O udruzi", about_path %></li>
             
             <li class=<% if current_page?(statut_path) %>'active'
-            <% else %>'hvr-overline-from-center active'<% end %>>
+            <% else %>'hvr-overline-from-center'<% end %>>
             <%= link_to "Statut", statut_path %></li>
             
             <li class=<% if current_page?(news_path) %>'active'
-            <% else %>'hvr-overline-from-center active'<% end %>>
+            <% else %>'hvr-overline-from-center'<% end %>>
             <%= link_to "Vijesti", news_path %></li>
             
             <li class=<% if current_page?(contact_path) %>'active'
-            <% else %>'hvr-overline-from-center active'<% end %>>
+            <% else %>'hvr-overline-from-center'<% end %>>
             <%= link_to "Kontakt", contact_path %></li>
             
             <% if user_signed_in? %>
-              <li class=<% if current_page?(show_profile_path ) %>'active'
-              <% else %>'hvr-overline-from-center active'<% end %>>
+              <li class=<% if current_page?(show_profile_path) %>'active'
+              <% else %>'hvr-overline-from-center'<% end %>>
               <%= link_to "Profil", show_profile_path %></li>
               <li class="hvr-overline-from-center"><%= link_to "Odjava", logout_path %></li>
             <% else %>
@@ -46,41 +45,3 @@
           </ul>
         </div>
 </nav>
-
-
-
-<!--
-<header class="navbar navbar-fixed-top navbar-inverse">
-  <div class="container">
-        <%= link_to "ETFOS Alumni", root_path, id: "logo" %>
-    <nav>
-      <ul class="nav navbar-nav navbar-right">
-        <li class=<%= 'active' if current_page?(root_path) %>>
-          <%= link_to "Početna",   root_path %>
-        </li>
-        <li class=<%= 'active' if current_page?(about_path) %>>
-          <%= link_to "O udruzi",   about_path %></li>
-        <li class=<%= 'active' if current_page?(statut_path) %>>
-          <%= link_to "Statut",   statut_path %></li>
-        <li class=<%= 'active' if current_page?(contact_path) %>>
-          <%= link_to "Kontakt", contact_path %></li>
-        
-        <% if user_signed_in? %>
-          <li class=<%= 'active' if current_page?(show_profile_path) || current_page?(edit_path)  %>>
-            <%= link_to "Profil", show_profile_path %>
-          </li>
-          <li><%= link_to "Odjava", logout_path %></li>
-        <% else %>
-          <li class=<%= 'active' if current_page?(register_path) %>>
-            <%= link_to "Registracija",   register_path %>
-          </li>
-          <li class=<%= 'active' if current_page?(login_path) %>>
-            <%= link_to "Prijava", login_path %>
-          </li>
-        <% end %> 
-      
-      </ul>
-    </nav>
-  </div>
-</header>
--->

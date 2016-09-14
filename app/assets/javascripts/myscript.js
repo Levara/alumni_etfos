@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).on('page:change', function(){ 
     
     $(".btn-header-1") 	
     	.mouseover(function(){
@@ -32,6 +32,8 @@ $(document).ready(function(){
       		$(this).addClass("slide");
     	}
   		});
+
+
 	});
 
 	// Hide Navbar on scroll down
@@ -73,7 +75,6 @@ $(document).ready(function(){
 		            $('.navbar-default').css({
 		            				'background-color':'rgba(255,255,255,1)',
 		            			    'padding-bottom': '3rem',
-		    						//'border-bottom': 'solid 2px #05376C'
 		    						'border-bottom': 'solid 2px #03ABF4'
 		    					});
 
@@ -92,4 +93,33 @@ $(document).ready(function(){
 		}
 
 });
+
+/*$(document).on('page-change', function() {
+
+	$(".btn-header-1") 	
+	    	.mouseover(function(){
+	        	$("#btn-icon-1").attr("src","/assets/register_blue.svg");
+	    	})
+	    	.mouseout(function(){
+	        	$("#btn-icon-1").attr("src","/assets/register.svg");
+	    	});
+
+	     $(".btn-header-2")
+	    	.mouseover(function(){
+	        	$("#btn-icon-2").attr("src","/assets/login_blue.svg");
+	    	})
+	    	.mouseout(function(){
+	        	$("#btn-icon-2").attr("src","/assets/login.svg");
+	    	});
+
+	    $(".btn-member")
+	    	.mouseover(function(){
+	        	$("#btn-icon-member").attr("src","/assets/member_2.svg");
+	    	})
+	    	.mouseout(function(){
+	        	$("#btn-icon-member").attr("src","/assets/member_1.svg");
+	    	});
+
+});*/
+
 

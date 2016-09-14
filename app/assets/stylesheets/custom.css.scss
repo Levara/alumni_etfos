@@ -265,10 +265,11 @@ body, html, section {
   border: 0px;
 }
 
-.navbar .nav > li.active  {
-  border-top: 5px solid $dark_blue;
+@media (min-width: 992px) {
+  .navbar .nav > li.active  {
+    border-top: 5px solid $dark_blue;
+    padding-top: 3.6rem; }
 }
-
 
 .navbar .navbar-brand {
   visibility: hidden;
@@ -1063,8 +1064,10 @@ a.social-link {
     }
 }
 
+@media (min-width: 992px) {
 .nav-scrolled .nav > li.active  {
-  border-top: 5px solid $dark_blue;
+  border-top: 5px solid $light_blue;
+  padding-top: 3.6rem;   }
 }
 
 .nav-scrolled .nav > li:last-of-type > a {

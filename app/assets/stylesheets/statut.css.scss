@@ -1,0 +1,208 @@
+/* Colors */
+
+$light_blue: #03ABF4;
+$dark_blue: #05376C;
+$white: #ffffff;
+$gray: #717171;
+
+.statut {
+	background-color: $white;
+
+
+	.header {
+		background-color: $white;
+	}
+
+	.title-area {
+	  	background: image-url('statut_header.svg') no-repeat center center fixed;
+	  	-webkit-background-size: cover;
+	  	-moz-background-size: cover;
+	  	-o-background-size: cover;
+	  	background-size: cover; 
+		padding: 6rem 0;
+		display: block;
+		margin-top: 10rem;
+		h1 {
+			color: $white;
+			padding-top: 2rem;
+			padding-bottom: 2rem;
+		}
+		h4 {
+			color: $white;
+			margin-bottom: 2rem;
+			line-height: 2;
+		}
+	}
+
+	.main-area {
+		padding: 6rem 0;
+		background-color: $white;
+	}
+
+	.statut-content {
+		h5 {
+			margin-top: 6rem;
+			color: $dark_blue;
+		}
+		h6 {
+			color: $gray;
+			margin-top: 4rem;
+			margin-bottom: 1rem;
+		}
+		p, li {
+			color: $gray;
+			line-height: 1.8;
+			text-align: justify;
+			font-family: 'Noto Sans', sans-serif;
+			font-weight: 400;
+	  		font-size: 1.2rem;
+	  		letter-spacing: 1px;
+		}
+		#subtitle {
+			color: $dark_blue;
+			line-height: 2;
+			margin-top: 2rem;
+		}
+		#signature {
+			float: right;
+			margin-bottom: 6rem;
+			p {
+				line-height: 1;
+				font-size: 1.4rem;
+			}
+		}
+	}
+
+
+	.become-member {
+		background-color: $white;
+		border: 2px solid $light_blue;
+		padding: 5rem 1rem;
+		h4 {
+			color: $dark_blue;
+			text-align: center;
+			margin-bottom: 2rem;
+		}
+		p {
+			color: $gray;
+		}	
+	}
+
+	.btn-member {
+		font-size: 1.5rem;
+		padding-right: 2rem;
+		padding-left: 1rem;
+		letter-spacing: 0px;
+		color: $white;
+		background-color: $light_blue;
+	}
+
+	#btn-icon-member {
+		margin-right: 1rem;
+	}
+
+	.social-networks {	
+		background-color: $dark_blue;
+		margin: 2rem 0;
+		padding: 1rem 2rem;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+	}
+
+	.social {
+		margin: 2rem 2rem;
+		padding: 0;
+		height: 5rem;
+		width: 5rem;
+		opacity: 1;
+		display: inline;
+	}
+
+	.subscribe {
+		//background: url(/home/monika/Work/AlumniEtfosFrontend/images/follow_bg.png) no-repeat center center fixed;
+		background-color: $light-blue;
+		padding: 4rem 3rem;
+		text-align: text-center;
+		h4 {
+			color: $white;
+			margin-bottom: 2rem;
+		}
+		p {
+			color: $white;
+			margin-bottom: 2rem;
+		}
+	}
+
+	#newsletter .btn-newsletter {
+		color: white;
+		width: 20rem;
+		padding: 2rem 3rem;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+		&:hover {
+			color: $light_blue;
+		}
+	}
+
+	#newsletter input[type="email"] {
+		width: 20rem;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+	}
+
+	#newsletter label {
+		font-size: 1.2rem;
+	}
+
+	#newsletter #mail-icon {
+		margin-left: 5rem;
+	}
+}
+
+#navbar2 {
+	background-color: $white;
+	padding-bottom: 3rem;
+	border-bottom: 2px solid $light_blue;
+}
+
+
+#navbar2 li > a {
+  color: $dark_blue;
+      &:hover {
+        color: $light_blue;
+    }
+}
+
+@media (min-width: 992px) {
+#navbar2 .nav > li.active  {
+  border-top: 5px solid $light_blue;
+  padding-top: 3.6rem;   }
+}
+
+#navbar2 .nav > li:last-of-type > a {
+  background-color: $light_blue;
+  color: $white;
+    &:hover {
+        color: $white;
+        background-color: $light_blue;
+    }
+}
+
+
+#navbar2 .navbar-brand {
+  display: inline;
+  visibility: visible;
+  color: $dark_blue;
+  font-family: 'League Spartan', sans-serif;
+  font-size: 2rem;
+  margin-left: 2rem;
+}
+
+
+#navbar2 .hvr-overline-from-center:before {
+  background: $light_blue;
+}
