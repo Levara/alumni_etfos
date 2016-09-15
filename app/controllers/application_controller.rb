@@ -4,6 +4,13 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   before_filter :configure_permitted_parameters, if: :devise_controller?
+  before_filter :set_contact
+
+  private
+
+  def set_contact
+    @contact = Contact.new
+  end
 
   protected
 
@@ -36,4 +43,8 @@ class ApplicationController < ActionController::Base
         :current_password) 
     }
   end
+
+
+
+
 end

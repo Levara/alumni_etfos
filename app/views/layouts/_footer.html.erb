@@ -1,29 +1,61 @@
+<% unless (current_page?(register_path) || current_page?(login_path) || current_page?(new_user_session_path) || current_page?(user_session_path)) %>
 <section class="footer">
+<!--
+<%= form_for @contact do |f| %>
 
+  <div class="form-group">
+    <%= f.label :name %><br/>
+    <%= f.text_field :name, autofocus: true, required: :true, :class => 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :email %><br/>
+    <%= f.email_field :email, autofocus: true, required: :true, :class => 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :message %><br/>
+    <%= f.text_area :message, autofocus: true, required: :true, rows: 20, as: :text, :class => 'form-control' %>
+  </div>
+
+  <div class="hidden">
+    <%= f.label :nickname %><br/>
+    <%= f.text_field :nickname, hint: 'Nemojte ispunjavati ovo polje' %>
+  </div>
+
+
+  <%= f.submit "Pošalji poruku", :class => 'btn btn-primary' %>
+
+<% end %>
+-->
      <div class="container">         
 
         <div class="row">
           <div class="col-xs-10 col-sm-5 col-md-5 col-lg-5 col-xs-push-1">   
             <%= image_tag 'contact.svg', :class => 'hvr-grow', :id => 'contact' %>
             <h4>KONTAKT</h4>
-             <form id="contact-form">    
+            <%= form_for @contact, :html => {:id => "contact-form"} do |f| %> 
               <div class="form-group">       
-                <label for="exampleInputEmail1">IME I PREZIME</label>
-                <input type="text" class="form-control" id="contactName" placeholder=""/>             
+                <label for=<%= :name %>>IME I PREZIME</label>
+                <%= f.text_field :name, autofocus: true, required: :true, :class => 'form-control' %>           
               </div>
 
               <div class="form-group">       
-                <label for="exampleInputEmail1">EMAIL</label>
-                <input type="email" class="form-control" id="contactEmail" placeholder=""/>
+                <label for=<%= :email %>>EMAIL</label>
+                 <%= f.email_field :email, autofocus: true, required: :true, :class => 'form-control' %>
               </div>
 
               <div class="form-group">       
-                <label for="exampleInputEmail1">PORUKA</label>
-                <textarea rows="4" class="form-control" id="contactMessage" placeholder=""></textarea>
+                <label for=<%= :message %>>PORUKA</label>
+                <%= f.text_area :message, autofocus: true, required: :true, rows: 4, as: :text, :class => 'form-control' %>
               </div>
-              
-              <button class="btn-contact" type="submit">POŠALJI</button>
-            </form>
+
+              <div class="hidden">
+                <%= f.label :nickname %><br/>
+                <%= f.text_field :nickname, hint: 'Nemojte ispunjavati ovo polje' %>
+              </div>
+              <%= f.submit "POŠALJI", :class => 'btn-contact' %>
+            <% end %>
           </div>
 
           <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 col-sm-push-2 col-md-push-2 col-lg-push-2" id="pages">   
@@ -118,3 +150,5 @@
     </div>
   
   </section>
+
+  <% end %>

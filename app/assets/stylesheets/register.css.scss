@@ -1,0 +1,291 @@
+$light_blue: #03ABF4; 
+$dark_blue: #05376C;
+$white: #FFFFFF;
+$whitesmoke: #F0F0F0;
+$gray: #717171;
+
+
+$facebook: #3b5998;
+$fb_dark: #2b406e;
+
+$gmail: #dd4b39;
+$gm_dark: #ae2e1e;
+
+
+/* General */
+
+
+#register-body {
+	background-color: $dark_blue;
+	margin: 0 auto;
+	padding-bottom: 10rem;
+
+	h3 {
+		color: $light_blue;
+		margin-bottom: 2rem;
+		font-size: 4rem;
+		opacity: 0.2;
+		letter-spacing: 1px;
+	}
+
+	p {
+		color: $white;
+	}
+
+	.login-area {
+		background-color: transparent;
+		margin: 0 auto;
+		padding-top: 3rem; 
+	}
+
+	/* Form */
+
+	#login {
+		opacity: 0.85;
+		padding: 0px;
+		margin-left: 2rem;
+		label {
+			color: $white;
+			font-size: 1.2rem;
+			font-family: 'League Spartan', sans-serif;
+		}
+
+		input[type="email"], input[type="password"] {
+	    
+		    outline: none;
+		    -webkit-box-shadow: none !important;
+		    -moz-box-shadow: none !important;
+		    box-shadow: none !important;
+		    
+		    border-top: none !important;
+		    border-left: none !important;
+		    border-right: none !important;
+		    border-bottom: solid 2px $white;
+		    border-radius: 0px;
+		    background-color: rgba(0,0,0,0) !important;
+		    width: 32rem;
+		    color: $white;
+		    font-family: 'Noto Sans', sans-serif;
+		    font-size: 1.4rem;
+	      	transition: linear 0.3s;
+
+		    &:focus {
+		      outline: none;
+		      border-bottom: solid 3px $white;
+		      border-radius: 5px;
+		    }
+
+		    &:hover {
+		      outline: none;
+		      border-bottom: solid 3px $white;
+		      border-radius: 5px;
+		    }
+		    input[type="email"], input[type="password"] {
+		    	background-color: transparent;
+		    	border: 1px solid $white;
+		    }
+		  }
+
+		  ::-webkit-input-placeholder {
+		   color: $white;
+		   opacity: 0.7;  
+		   letter-spacing: 1px;
+		   font-family: 'Noto Sans', sans-serif;
+		  }
+
+		  :-moz-placeholder { /* Firefox 18- */
+		   color: $white;
+		   opacity: 0.7;  
+		   letter-spacing: 1px;
+		   font-family: 'Noto Sans', sans-serif;
+		  }
+
+		  ::-moz-placeholder {  /* Firefox 19+ */
+		   color: $white; 
+		   opacity: 0.7;   
+		   background-color: transparent;
+		   letter-spacing: 1px;
+		   font-family: 'Noto Sans', sans-serif;
+		  }
+
+		  :-ms-input-placeholder {  
+		   color: $white;  
+		   opacity: 0.7;  
+		   background-color: transparent;
+		   letter-spacing: 1px;
+		   font-family: 'Noto Sans', sans-serif;
+		  }
+
+
+		  button {
+		  	display: block;
+		  }
+		  .form-group {
+		  	display: block;
+		  }
+	}
+
+	.form-icon {
+		height: 2rem;
+		width: 2rem;
+		margin-right: 0.5rem;
+	}
+
+	.img-btn {
+		height: 2rem;
+		width: 2rem;
+		margin-right: 1rem;
+		display: inline;
+	}
+
+	/* Buttons*/
+
+	.btn-prijava {
+		background-color: $light_blue; 
+		border-radius: 0px;
+		border: solid 2px $light_blue;
+		color: $white; 
+		font-size: 1.2rem;
+		font-family: 'League Spartan', sans-serif;
+		padding: 1rem 11rem;
+		margin: 1.5rem 0rem;
+		&:hover {
+			background-color: $light_blue;
+			color: $white;
+			border-color: $light_blue;
+		}
+	}
+
+	.btn-soc-right {
+		color: $white;
+		font-size: 1rem;
+		font-family: 'League Spartan', sans-serif;
+		border-radius: 0px;
+		height: 4rem;
+		margin-top: 1rem;
+		padding: 1rem 1rem;
+		-webkit-transition: all 0.3s ease; /* Safari */
+	    transition: all 0.3s ease;
+		&:hover {
+			color: $white;
+		}
+	}
+
+	.btn-soc-left {
+		border-radius: 0px;
+		padding-left: 1rem;
+		padding-right: 0rem;
+		padding-top: 0.5rem;
+		padding-bottom: 0.5rem;
+		height: 4rem;
+		margin-top: 1rem;
+		border: 2px solid;
+	}
+
+	#btn-1-1 {
+		background-color: $fb_dark;
+		border: 2px solid $fb_dark;
+	}
+
+	#btn-1-2 {
+		border: 2px solid $facebook;
+		background-color: $facebook;
+		&:hover {
+			background-color: $fb_dark;
+			border: 2px solid $fb_dark;	
+		}
+	}
+
+	#btn-2-1 {
+		background-color: $gm_dark;
+		border: 2px solid $gm_dark;
+	}
+
+	#btn-2-2 {
+		background-color: $gmail;
+		border: 2px solid $gmail;
+		padding: 1rem 1.8rem;
+		&:hover {
+			background-color: $gm_dark;	
+			border: 2px solid $gm_dark;
+		}
+	}
+
+	/* Mobile Adjustments*/
+
+
+	@media(max-width: 992px) {
+		h3 { 
+			float: left;
+			margin-left: 3rem;
+		}
+	}
+
+
+
+	@media(max-width: 768px) {
+		.navbar-default { 
+			background-color: $light_blue;
+			padding-bottom: 0rem;
+			margin-bottom: 0rem;
+		}
+		.login-area {
+			margin-top: 0;
+			padding: 3rem 0rem;
+			h3 {
+				display: none;
+			}
+		}
+		.brand {
+			display: none;
+		}
+		#login {
+			margin: 0;
+		}
+	}
+
+	/* Nekakav navbar */
+
+
+	#btn-x {
+		float: right;
+		height: 4.5rem;
+		width: 4.5rem;
+		margin-top: 2rem;
+		margin-right: 5rem;
+		opacity: 1;
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+
+	
+	#brand-logo {
+		color: $light_blue;
+		font-size: 2rem;
+		font-family: 'League Spartan', sans-serif;
+		opacity: 1;
+		margin-left: 3.5rem;
+		&:hover {
+			opacity: 0.8;
+			text-decoration: none;
+			color: $light_blue;
+		}	
+	}
+
+	#brand-logo #register-brand {
+	  display: inline;
+	  vertical-align: middle;
+	}
+
+	.nav-2 {
+		margin-top: 1.5rem;
+	}
+	#error_explanation {
+		color: $white;
+		h2, ul li {
+		font-family: 'Noto Sans', sans-serif;
+		font-size: 1rem;
+		}
+	}
+}

@@ -14,11 +14,11 @@ Rails.application.routes.draw do
   devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks", :registrations => "users/registrations" }
 
   devise_scope :user do
-    get   'uredi',        to: 'devise/registrations#edit',  as: :edit
-    get   'registracija', to: 'devise/registrations#new',   as: :register
-    get   'prijava' ,     to: 'devise/sessions#new',        as: :login
-    get   'odjava' ,      to: 'devise/sessions#destroy',    as: :logout
-    get   'prikaz',       to: 'users#show_profile',         as: :show_profile
+    get   'uredi',        to: 'users/registrations#edit',  as: :edit
+    get   'registracija', to: 'users/registrations#new',   as: :register
+    get   'prijava' ,     to: 'users/sessions#new',        as: :login
+    get   'odjava' ,      to: 'users/sessions#destroy',    as: :logout
+    get   'prikaz',       to: 'users#show_profile',        as: :show_profile
   end
 
   devise_for :admins, :controllers => {:sessions => "admins_sessions"}  

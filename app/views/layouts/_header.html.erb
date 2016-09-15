@@ -6,7 +6,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#"><%= image_tag 'logo_brand.svg', :id => 'brand-logo' %>AMA ETFOS</a>
+          <a class="navbar-brand" href="/"><%= image_tag 'logo_brand.svg', :id => 'brand-logo' %>AMA ETFOS</a>
         </div>
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -30,16 +30,15 @@
             <% else %>'hvr-overline-from-center'<% end %>>
             <%= link_to "Vijesti", news_path %></li>
             
-            <li class=<% if current_page?(contact_path) %>'active'
-            <% else %>'hvr-overline-from-center'<% end %>>
-            <%= link_to "Kontakt", contact_path %></li>
-            
             <% if user_signed_in? %>
               <li class=<% if current_page?(show_profile_path) %>'active'
               <% else %>'hvr-overline-from-center'<% end %>>
               <%= link_to "Profil", show_profile_path %></li>
-              <li class="hvr-overline-from-center"><%= link_to "Odjava", logout_path %></li>
+              <li><%= link_to "ODJAVA", logout_path %></li>
             <% else %>
+                <li class=<% if current_page?(contact_path) %>'active'
+              <% else %>'hvr-overline-from-center'<% end %>>
+              <%= link_to "Kontakt", contact_path %></li>
               <li><%= link_to "PRIJAVA", login_path, :class => 'hvr-grow' %></li>
            <% end %> 
           </ul>

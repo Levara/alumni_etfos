@@ -10,9 +10,11 @@
 
 
 </head>
-<body>
-  <%= render 'layouts/header' %>
-    
+    <% unless (current_page?(user_session_path) || current_page?(register_path) || current_page?(login_path) || current_page?(new_user_session_path)) %>
+      <body>
+      <%= render 'layouts/header' %>
+    <% end %>
+
     <!--
     <% flash.each do |key, value| %>
         <div class="alert alert-<%= key %>">

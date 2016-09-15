@@ -38,11 +38,11 @@ $screen-lg-min: 1200px;
 
 ///////////////////////////////////GENERAL\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
-body, html, section { 
+body, html  { 
   margin:   0; 
   padding:  0; 
   overflow-x: hidden;
-  background-color: #19b5fe;
+  background-color: #03ABF4
 }
 
 
@@ -1095,8 +1095,92 @@ a.social-link {
 }
 
 
+//USER INFO CLASS
+
+.user-info {
+  margin-top: 12rem;
+  padding-top: 2rem;
+  padding-bottom: 10rem;
+  background-color: $white;
+  h2 {
+    color: $dark_blue;
+  }
+  table {
+    margin: 4rem;
+    font-family: 'Noto Sans', sans-serif;
+  }
+  .btn-edit-profile {
+    font-family: 'League Spartan', sans-serif;
+    letter-spacing: 1px;
+    padding: 1.6rem 6rem;
+    border: solid 2px $dark-blue;
+    background-color: transparent;
+    border-radius: 0px;
+    font-size: 1.2rem;
+    color: $dark_blue;
+    &:hover {
+      color: $white;
+      background-color: $dark_blue;
+      text-decoration: none;
+    } 
+  }
+
+}
+
+.profile-edit {
+  margin-top: 12rem;
+  padding-top: 2rem;
+  padding-bottom: 10rem;
+  background-color: $white;
+  h2 {
+    color: $dark_blue;
+    margin-bottom: 2rem;
+  }
+  .btn-edit-profile {
+    font-family: 'League Spartan', sans-serif;
+    letter-spacing: 1px;
+    padding: 1rem 4rem;
+    background-color: $dark_blue;
+    border-radius: 0px;
+    font-size: 1rem;
+    color: $white;
+    &:hover {
+      background-color: $light_blue;
+      text-decoration: none;
+    } 
+  }
+  .btn-cancel {
+    font-family: 'Noto Sans', sans serif;
+    color: $dark_blue;
+    text-decoration: underline;
+    &:hover {
+      color: $light_blue;
+    }
+  }
+  input {
+    border-radius: 0px;
+  }
+}
 
 
-
-
+///CONTACT PAGE
+#contact-title {
+  padding: 2rem;
+  color: $light_blue;
+}
+.contact-note {
+  background-color: $white;
+  padding-top: 18rem;
+  padding-bottom: 8rem;
+  margin: 0 auto;
+}
+#contact-thanks {
+  color: $dark_blue;
+}
+#thanks {
+  color: $dark-blue
+}
+.container-fluid.note {
+  background-color: $white;
+}
 
