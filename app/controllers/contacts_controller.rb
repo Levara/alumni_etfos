@@ -15,10 +15,11 @@ def create
 	end
 end
 
-  private
+#  RECONSIDER
+#  private
 
-  def contact_params
-    params.require(:contact).permit(:name, :email, :message)
-  end
+#  def contact_params
+#    params.require(:contact).permit(:name, :email, :message)
+#  end
 
 end

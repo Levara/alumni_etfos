@@ -16,14 +16,14 @@
 
 <div class="container">
 
-	<% @posts.each do |post| %>
+	<% @posts.reverse.each do |post| %>
 		<div class="row">
 			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
 				<%= image_tag post.image.url(:medium), :class => 'img-responsive hvr-grow news-photo'%>
 			</div>
 			<div class="col-xs-12 col-sm-6 col-md-5 col-lg-5 col-md-push-1 col-lg-push-1">
 				<h3><%= post.title %></h3>
-				<h6>24. lipnja 2016.</h6>
+				<h6><%= post.created_at.strftime("%d. %m. %Y.") %></h6>
 				<p><%= first_20(post.content) %></p>
 				<%= link_to "VIŠE", {:action => 'single_post', :id => post.id}, :class => 'btn btn-primary btn-news hvr-grow'%>
 			</div>
